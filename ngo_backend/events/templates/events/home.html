@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero-banner">
+    <img src="{% static 'images/edu.jpg' %}" class="hero-img">
+
+    <div class="hero-text">
+        <h1>Empowering Lives 🌍</h1>
+        <p>We create impact through education, healthcare and support</p>
+    </div>
+</div>
+
+<!-- CARDS -->
+<div class="cards">
+
+    <div class="card">
+        <img src="{% static 'images/education.jpg' %}">
+        <h3>Education</h3>
+        <p>Helping children build a brighter future.</p>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/healthcare.jpg' %}">
+        <h3>Healthcare</h3>
+        <p>Providing medical support to communities.</p>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/supplies.jpg' %}">
+        <h3>Supplies</h3>
+        <p>Providing essential supplies to those in need.</p>
+    </div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats">
+
+    <div class="stat-box">
+        <h2>7</h2>
+        <p>Total Events</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>4</h2>
+        <p>Total Contributions</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>₹20000</h2>
+        <p>Total Raised</p>
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="info-box">
+    <h2>About Us</h2>
+    <p>We are an NGO dedicated to improving lives through education, healthcare and essential supplies.</p>
+</div>
+
+<!-- CONTACT -->
+<div class="info-box">
+    <h2>Contact Us</h2>
+    <p>Email: ngo@gmail.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Location: Pune, India</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    © 2026 SevaConnect NGO | Built by pankaj
+</footer>
+
+{% endblock %}

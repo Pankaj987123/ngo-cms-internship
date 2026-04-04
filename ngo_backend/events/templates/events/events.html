@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="text-align:center; margin-bottom:20px;">
+    <a href="/add-event/" class="btn blue">+ Add Event</a>
+</div>
+
+<h1 class="page-title">All Events</h1>
+
+<div class="search-bar">
+    <input type="text" placeholder="Search events...">
+    <button>Search</button>
+</div>
+
+<div class="event-grid">
+
+    {% for event in events %}
+    <div class="event-box">
+        <h3>{{ event.title }}</h3>
+        <p>{{ event.description }}</p>
+
+        <p><b>Date:</b> {{ event.date }}</p>
+
+        <a href="#" class="btn blue">View</a>
+        <a href="/donate/" class="btn green">Donate</a>
+
+        {% if user.is_authenticated %}
+        <a href="/delete/{{ event.id }}/" class="btn red">Delete</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
